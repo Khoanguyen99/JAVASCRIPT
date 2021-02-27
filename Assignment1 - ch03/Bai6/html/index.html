@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <script>
+        var sum;
+        var n1 = 0;
+        var n2 = 1;
+        document.writeln("First 20 numbers of Fibonacci numbers: " + "<br><br>");
+        document.writeln("Number 0: " +n1 + "<br>");
+        document.writeln("Number 1: "+n2+"<br>");
+        for (i = 2; i < 21; i++) {
+            sum=n1+n2;
+            document.writeln("Number "+ i +": " + sum + "<br>");
+            n1=n2;
+            n2=sum;
+        }
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

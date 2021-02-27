@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find x from ax+b=0</title>
+    <script>
+        var a = parseInt(prompt("Enter a: "));
+        var b = parseInt(prompt("Enter b: "));
+
+        if ((a==0) & (b<0)) {
+            alert ("Phuong trinh vo nghiem");
+        }
+        else if ((a==0) & (b==0)) {
+            alert ("Phuong trinh co vo so nghiem");
+        }
+        else {
+            x=parseInt((-b)/a);
+            alert ("Phuong trinh co nghiem la: " + x);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

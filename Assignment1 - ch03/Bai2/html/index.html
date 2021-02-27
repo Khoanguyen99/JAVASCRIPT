@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Average And Rank</title>
+    <script>
+        var math = parseFloat(prompt("Enter Math: "));
+        var physics = parseFloat(prompt("Enter Physics: "));
+        var chemistry = parseFloat(prompt("Enter Chemistry: "));
+        var average;
+        var rank ;
+
+        // Calculate value for average and rank
+        average = parseFloat(math + physics + chemistry)/3;
+        if (average >=8.0 ){
+            rank = "A";
+        }
+        if (average >=6.5){
+            rank = "B"
+        }
+        if (average >=5.0){
+            rank = "C"
+        }
+        else {
+            rank = "D"
+        }
+
+        alert ("AVG= " + average + ";" + "Rank: " + rank);
+    </script>
+</head>
+<body>
+    <script>
+        document.writeln("<h1>Average and Rank</h1>");
+        document.writeln("Math=" + math + "<br>" + "Physics=" + physics + "<br>" +"Chemistry=" + chemistry + "<br><br>");
+        document.writeln("Average= " + average + "; " + "Rank: " + rank);
+    </script>
+</body>
+</html>
