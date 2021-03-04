@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <script>
+        var code = parseInt(prompt("Enter StudentCode: "));
+        var name = prompt("Enter StudentName: ");
+        var age = parseInt(prompt("Enter StudentAge: "));
+        var sex = prompt("Enter StudentSex: ");
+        
+        if (isNaN(code) || code <= 0) {
+            alert("Please check Student Code. ");
+        }
+        if (isNaN(age) || age <= 0 || age >= 130) {
+            alert("Please check Student Age. ");
+        }
+        if (name == "" || isNaN(name) == false) {
+            alert("Please check Student Name. ");
+        }
+        if (sex == "" || isNaN(sex) == false) {
+            alert("Please check Student Sex. ");
+        }
+
+        document.writeln("<h1>Student's Information</h1>");
+        document.writeln("Student Code: " + code + "<br>", "Student Name: " + name + "<br>", "Student Age: " + age +
+            "<br>", "Student Sex: " + sex);
+    </script>
+</head>
+
+
+<body>
+
+</body>
+
+</html>
