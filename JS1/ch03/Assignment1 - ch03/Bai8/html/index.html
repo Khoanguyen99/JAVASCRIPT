@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day of Month</title>
+    <script>
+        var day=[31,28,31,30,31,30,31,31,30,31,30,21];
+        var n=parseInt(prompt("Enter n from 1 to 12: "));
+        if ((n<1) || (n>12)){
+            alert("Please check n again!");
+        }else {
+            alert ("Number of days in month " + n + ": " + day[n-1] + " days");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

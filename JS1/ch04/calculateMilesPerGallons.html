@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        "use strict";
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        var calculateMPG = function(miles, gallons){
+            var result = miles / gallons;
+            return result.toFixed(1);
+        }
+        var processEntry = function(){
+            var miles = parseFloat($("miles").value);
+            var gallons = parseFloat($("gallons").value);
+            var result = calculate(miles,gallons);
+            $("result").value=result;
+        };
+
+        window.onload = function (){
+            $("calculate").onclick=processEntry;
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculate Miles Per Gallons</h1>
+    <form>
+        <label>Miles Driven: </label>
+        <input type="text" id="miles">
+        <br>
+        <label>Gallons of Gas used: </label>
+        <input type="text" id="gallons">
+        <br>
+        <label>Miles per gallons: </label>
+        <input type="text" id="result">
+        <br>
+        <input type="button" id="calculate" value="calculate MPG">
+    </form>
+</body>
+</html>

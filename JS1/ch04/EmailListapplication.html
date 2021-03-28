@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Email List</title>
+    <script>
+        var $ = function (id){
+            return document.getElementById(id);
+        };
+
+        var processEntry = function(){
+            // get value
+            var email = $("email").value;
+            var email2 = $("email2").value;
+            var firstName= $("first_name").value;
+            var isValid = true;
+            // validate data
+            if (email =="" ) {
+                isValid=false;
+                $("email_error").firstChild.nodeValue = "This field is required";
+            }
+            else {
+                $("email_error").firstChild.nodeValue = "";
+            }
+            if (email2 =="" ) {
+                isValid=false;
+                $("email2_error").firstChild.nodeValue = "This field is required";
+            }
+            else {
+                if (email2 != email) {
+                    $("email2_error").firstChild.nodeValue = "This field must be same with first entry";
+                }
+                else {
+                $("email2_error").firstChild.nodeValue = "";
+            }
+            }
+
+            if (firstName =="" ) {
+                isValid=false;
+                $("first_name_error").firstChild.nodeValue = "This field is required";
+            }
+            else {
+                $("first_name_error").firstChild.nodeValue = "";
+            }
+
+            // submit form
+            if (isValid){
+                $("email_form").submit();
+            };
+        };
+
+
+        window.onload = function(){
+            $("join_list").onclick=processEntry;
+        };
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>Please join our email list</h1>
+        <!-- <form id="email_form" name="email_form" // action="join.html" method="GET" > -->
+        <form id="email_form" name="email_form">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" autofocus />
+            <span id="email_error">*</span><br />
+
+            <label for="email2">Re-enter Email Address:</label>
+            <input type="email" id="email2" name="email2" />
+            <span id="email2_error">*</span><br />
+
+            <label for="first_name">Fist Name:</label>
+            <input type="text" id="first_name" name="first_name" />
+            <span id="first_name_error">*</span><br />
+
+            <input type="button" id="join_list" value="Join our List" />
+        </form>
+    </main>
+</body>
+
+</html>

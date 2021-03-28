@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Test Scores Application</title>
+    <script>
+        var entry;
+        var average;
+
+        entry = window.prompt("Enter Score1: ", 10);
+        entry = parseInt(entry);
+        var score1 = entry;
+
+        entry = window.prompt("Enter Score2: ", 10);
+        entry = parseInt(entry);
+        var score2 = entry;
+
+        entry = window.prompt("Enter Score3: ", 10);
+        entry = parseInt(entry);
+        var score3 = entry;
+
+        var average = (score1+score2+score3)/3;
+
+        window.alert("Result: " + average);
+    </script>
+</head>
+<body>
+    <script>
+        document.write("<h1>The Test Scores Application</h1>");
+        document.write("Score1= "+score1+"<br>"+ "Score2= "+score2+"<br>" + "Score3= "+score3+"<br><br>" + "Average score= " + average + "<br><br>");
+    </script>
+    <p>Thanks for using the Test Scores application</p>
+</body>
+</html>
